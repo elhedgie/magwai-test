@@ -1,0 +1,63 @@
+@import "fonts"
+@import "../../node_modules/normalize.css/normalize"
+@import "vars"
+
+body 
+    box-sizing: border-box
+    position: relative
+    font-family: Montserrat
+    background-color: #131313
+    font-size: 14px
+    @media (max-width: 768px)
+       color: $font-color
+p
+    margin: 0
+    padding: 0
+input, button, textarea
+    box-sizing: border-box
+.heading-two
+    margin: 0
+.btn
+    position: relative
+    min-height: 60px
+    background-color: $buttons
+    color: #fff
+    font-size: 12px
+    font-weight: 700
+    transform: skew(-15deg)
+    border: none
+    cursor: pointer
+    transition: $transition
+    text-transform: uppercase
+    
+    &:focus
+        background-color: #A67F20	
+    @media (hover: hover)
+        &:hover
+            background-color: #BFA668
+    &:active
+        background-color: #A67F20
+    &__text 
+        display: block
+        transform: skew(15deg)
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        right: -10px
+        display: inline-block
+        width: 5px
+        height: 60px
+        background-color: #fff
+        
+
+
+.popup 
+    display: none
+
+@import "header/header"
+@import "hero/hero"
+@import "mixin/mixin"
+@import "cards/cards"
+@import "popup/popup"
+

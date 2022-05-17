@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.min.css" />
+    <script src="js/app.min.js"></script>
+    <title>Magwai</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__burger burger">
+        <span class="burger__middle"></span>
+      </div>
+      <a href="#" class="header__logo">
+        <picture>
+          <source srcset="img/svg/logoS.svg" media="(max-width: 767px)" />
+          <source srcset="img/svg/logo.svg" />
+          <img srcset="img/svg/logo.svg" alt="Logo" />
+        </picture>
+      </a>
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">УСЛУГИ</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">АБОНЕМЕНТЫ</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">ПОЧЕМУ МЫ</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">ОБОРУДОВАНИЕ</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">АКЦИИ</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">FAQ</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">КОНТАКТЫ</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__contacts contacts">
+        <a
+          href="tel:+1234567890"
+          aria-label="Телефон"
+          class="contacts__phone-link phone-link"
+        >
+          <svg
+            width="21"
+            height="20"
+            viewBox="0 0 21 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.5318 14.2139L15.254 12.491C15.486 12.2618 15.7794 12.1049 16.0988 12.0394C16.4182 11.9739 16.7497 12.0025 17.0531 12.1218L19.152 12.9602C19.4586 13.0847 19.7215 13.2972 19.9076 13.5709C20.0937 13.8447 20.1946 14.1674 20.1976 14.4985V18.3442C20.1958 18.5694 20.1485 18.7919 20.0585 18.9983C19.9685 19.2047 19.8377 19.3908 19.6739 19.5453C19.5101 19.6998 19.3168 19.8195 19.1056 19.8973C18.8943 19.9751 18.6695 20.0093 18.4447 19.9979C3.73683 19.0826 0.769122 6.62239 0.207871 1.85368C0.181817 1.6195 0.205622 1.38246 0.277718 1.15814C0.349815 0.933831 0.468569 0.727331 0.62617 0.55223C0.78377 0.377128 0.976644 0.237394 1.1921 0.142219C1.40756 0.0470438 1.64072 -0.00141458 1.87625 3.14343e-05H5.58973C5.92111 0.0010127 6.24461 0.101149 6.51863 0.287561C6.79266 0.473973 7.00467 0.738135 7.1274 1.04607L7.96544 3.14584C8.08864 3.44817 8.12008 3.78011 8.05581 4.10021C7.99155 4.4203 7.83443 4.71436 7.60408 4.94565L5.88189 6.66854C5.88189 6.66854 6.87369 13.3832 13.5318 14.2139Z"
+              fill="white"
+            />
+          </svg>
+        </a>
+        <button class="contacts__apply-btn apply-btn btn">
+          <span class="btn__text">ОСТАВИТЬ ЗАЯВКУ</span>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="popup">
+        <div class="popup__wrap">
+          <div class="popup__block">
+            <form action="#" class="popup__apply-form apply-form">
+              <fieldset class="popup__fieldset">
+                <button aria-label="Закрыть" class="popup__close-btn close-btn">
+                  <svg
+                    viewBox="0 0 26 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.0233 13L25.2772 0.777344C25.449 0.574219 25.3045 0.265625 25.0389 0.265625H21.9217C21.7381 0.265625 21.5623 0.347656 21.4412 0.488281L12.9842 10.5703L4.52717 0.488281C4.40998 0.347656 4.2342 0.265625 4.0467 0.265625H0.929512C0.663887 0.265625 0.519356 0.574219 0.691231 0.777344L10.9451 13L0.691231 25.2227C0.652729 25.2679 0.628029 25.3233 0.620062 25.3822C0.612094 25.4411 0.621195 25.501 0.646283 25.5549C0.671371 25.6088 0.711394 25.6544 0.761598 25.6862C0.811803 25.718 0.87008 25.7347 0.929512 25.7344H4.0467C4.23029 25.7344 4.40607 25.6523 4.52717 25.5117L12.9842 15.4297L21.4412 25.5117C21.5584 25.6523 21.7342 25.7344 21.9217 25.7344H25.0389C25.3045 25.7344 25.449 25.4258 25.2772 25.2227L15.0233 13Z"
+                      fill="white"
+                    />
+                  </svg>
+                </button>
+                <h2 class="heading-two popup__heading-two">Оставьте заявку</h2>
+                <!-- <h2 class="heading-two popup__heading-two">оставьте заявку</h2> -->
+                <span class="popup__subtitle">
+                  Оставьте заявку и наш менеджер свяжется с вами в течение 10
+                  -15 минут
+                </span>
+                <label for="name" class="fake-placeholder"
+                  ><input
+                    required
+                    id="name"
+                    type="text"
+                    class="apply-form__input"
+                    placeholder="Ваше имя*"
+                  /><span class="fake-placeholder__text">Ваше имя*</span></label
+                >
+
+                <label for="email" class="fake-placeholder"
+                  ><input
+                    id="email"
+                    type="email"
+                    class="apply-form__input"
+                    value="MAGWAI@info.ru"
+                    placeholder="Ваш email"
+                  /><span class="fake-placeholder__text"
+                    >Ваш email*</span
+                  ></label
+                >
+                <label for="phone" class="fake-placeholder"
+                  ><input
+                    id="phone"
+                    type="tel"
+                    class="apply-form__input"
+                    placeholder="Ваш телефон"
+                  /><span class="fake-placeholder__text"
+                    >Ваш телефон*</span
+                  ></label
+                >
+                <textarea
+                  class="apply-form__textarea"
+                  cols="30"
+                  rows="10"
+                  placeholder="Ваш вопрос*"
+                ></textarea>
+                <div class="apply-form__bottom-block">
+                  <button
+                    type="submit"
+                    class="apply-form__apply-btn apply-btn btn"
+                  >
+                    <span class="btn__text">ОСТАВИТЬ ЗАЯВКУ</span>
+                  </button>
+                  <span class="apply-form__commitment-text"
+                    >Нажимая на кнопку “Оставить заявку” вы соглашаетесь с
+                    <a href="#" class="apply-form__commitment-link">
+                      “Пользовательским соглашением”</a
+                    ></span
+                  >
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="hero">
+        <div class="slider swiper">
+          <div class="swiper-wrapper">
+            <div id="slide1" class="swiper-slide slider__slide-one">
+              <div class="slider__info">
+                <h2 class="hero__title-two heading-two">
+                  Полет Илона Маска и DOGIE COIN
+                </h2>
+                <p class="hero__subtitle">
+                  В прошлый четверг все офигели от полета DOGIE COIN на марс.
+                </p>
+                <button class="hero__apply-btn apply-btn btn">
+                  <span class="btn__text">ОСТАВИТЬ ЗАЯВКУ</span>
+                </button>
+              </div>
+              <div class="slider__bar swiper-pagination"></div>
+            </div>
+            <div id="slide2" class="swiper-slide slider__slide-two">
+              <div class="slider__info">
+                <h2 class="hero__title-two heading-two">DOGIE COIN УПАЛ</h2>
+                <p class="hero__subtitle">Все в шоке, я потерял все деньги</p>
+                <button class="hero__apply-btn apply-btn btn">
+                  <span class="btn__text">ОСТАВИТЬ ЗАЯВКУ</span>
+                </button>
+              </div>
+              <div class="slider__bar swiper-pagination"></div>
+            </div>
+            <div id="slide3" class="swiper-slide slider__slide-three">
+              <div class="slider__info">
+                <h2 class="hero__title-two heading-two">
+                  Эпическое возвращения на хаи
+                </h2>
+                <p class="hero__subtitle">Все в шоке, я снова богат</p>
+                <button class="hero__apply-btn apply-btn btn">
+                  <span class="btn__text">ОСТАВИТЬ ЗАЯВКУ</span>
+                </button>
+              </div>
+              <div class="slider__bar swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cards">
+        <h2 class="cards__heading-two heading-two">Карточки</h2>
+        <div class="cards__card-block">
+          <article id="1" class="cards__card card">
+            <img class="card__img" src="img/jpg/card_1.jpeg" alt="Карточка" />
+            <div class="card__article-block">
+              <h3 class="card__heading heading-three">water</h3>
+              <span class="card__subtitle"
+                >How to increase your productivity with a Music</span
+              >
+              <p class="card__text">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                santium doloremque laudantium, totam rem sed ut perspiciatis
+                unde omnis iste natus error sit voluptatem accusantium dolo…
+              </p>
+              <span class="card__post-info"
+                >Posted by <b>Eugenia</b>, on July 24, 2019</span
+              >
+              <a href="#" class="card__reading-link">Continue reading</a>
+            </div>
+          </article>
+          <article id="2" class="cards__card card">
+            <img class="card__img" src="img/jpg/card_2.jpeg" alt="Карточка" />
+            <div class="card__article-block">
+              <h3 class="card__heading heading-three">water</h3>
+              <span class="card__subtitle"
+                >How to increase your productivity with a Music</span
+              >
+              <p class="card__text">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                santium doloremque laudantium, totam rem sed ut perspiciatis
+                unde omnis iste natus error sit voluptatem accusantium dolo…
+              </p>
+              <span class="card__post-info"
+                >Posted by <b>Eugenia</b>, on July 24, 2019</span
+              >
+              <a href="#" class="card__reading-link">Continue reading</a>
+            </div>
+          </article>
+          <article id="3" class="cards__card card">
+            <img class="card__img" src="img/jpg/card_3.jpeg" alt="Карточка" />
+            <div class="card__article-block">
+              <h3 class="card__heading heading-three">bridge</h3>
+              <span class="card__subtitle"
+                >How to increase your productivity with a Music</span
+              >
+              <p class="card__text">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                santium doloremque laudantium, totam rem sed ut perspiciatis
+                unde omnis iste natus error sit voluptatem accusantium dolo…
+              </p>
+              <span class="card__post-info"
+                >Posted by <b>Eugenia</b>, on July 24, 2019</span
+              >
+              <a href="#" class="card__reading-link">Continue reading</a>
+            </div>
+          </article>
+          <article id="4" class="cards__card card">
+            <img class="card__img" src="img/jpg/card_4.jpeg" alt="Карточка" />
+            <div class="card__article-block">
+              <h3 class="card__heading heading-three">bridge</h3>
+              <span class="card__subtitle"
+                >How to increase your productivity with a Music</span
+              >
+              <p class="card__text">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                santium doloremque laudantium, totam rem sed ut perspiciatis
+                unde omnis iste natus error sit voluptatem accusantium dolo…
+              </p>
+              <span class="card__post-info"
+                >Posted by <b>Eugenia</b>, on July 24, 2019</span
+              >
+              <a href="#" class="card__reading-link">Continue reading</a>
+            </div>
+          </article>
+          <article id="5" class="cards__card card">
+            <img class="card__img" src="img/jpg/card_5.jpeg" alt="Карточка" />
+            <div class="card__article-block">
+              <h3 class="card__heading heading-three">bridge</h3>
+              <span class="card__subtitle"
+                >How to increase your productivity with a Music</span
+              >
+              <p class="card__text">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                santium doloremque laudantium, totam rem sed ut perspiciatis
+                unde omnis iste natus error sit voluptatem accusantium dolo…
+              </p>
+              <span class="card__post-info"
+                >Posted by <b>Eugenia</b>, on July 24, 2019</span
+              >
+              <a href="#" class="card__reading-link">Continue reading</a>
+            </div>
+          </article>
+          <article id="6" class="cards__card card">
+            <img class="card__img" src="img/jpg/card_6.jpeg" alt="Карточка" />
+            <div class="card__article-block">
+              <h3 class="card__heading heading-three">forest</h3>
+              <span class="card__subtitle"
+                >How to increase your productivity with a Music</span
+              >
+              <p class="card__text">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                santium doloremque laudantium, totam rem sed ut perspiciatis
+                unde omnis iste natus error sit voluptatem accusantium dolo…
+              </p>
+              <span class="card__post-info"
+                >Posted by <b>Eugenia</b>, on July 24, 2019</span
+              >
+              <a href="#" class="card__reading-link">Continue reading</a>
+            </div>
+          </article>
+          <article id="7" class="cards__card card">
+            <img class="card__img" src="img/jpg/card_7.jpeg" alt="Карточка" />
+            <div class="card__article-block">
+              <h3 class="card__heading heading-three">forest</h3>
+              <span class="card__subtitle"
+                >How to increase your productivity with a Music</span
+              >
+              <p class="card__text">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                santium doloremque laudantium, totam rem sed ut perspiciatis
+                unde omnis iste natus error sit voluptatem accusantium dolo…
+              </p>
+              <span class="card__post-info"
+                >Posted by <b>Eugenia</b>, on July 24, 2019</span
+              >
+              <a href="#" class="card__reading-link">Continue reading</a>
+            </div>
+          </article>
+          <article id="8" class="cards__card card">
+            <img class="card__img" src="img/jpg/card_8.jpeg" alt="Карточка" />
+            <div class="card__article-block">
+              <h3 class="card__heading heading-three">nature</h3>
+              <span class="card__subtitle"
+                >How to increase your productivity with a Music</span
+              >
+              <p class="card__text">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                santium doloremque laudantium, totam rem sed ut perspiciatis
+                unde omnis iste natus error sit voluptatem accusantium dolo…
+              </p>
+              <span class="card__post-info"
+                >Posted by <b>Eugenia</b>, on July 24, 2019</span
+              >
+              <a href="#" class="card__reading-link">Continue reading</a>
+            </div>
+          </article>
+          <article id="9" class="cards__card card">
+            <img class="card__img" src="img/jpg/card_9.jpeg" alt="Карточка" />
+            <div class="card__article-block">
+              <h3 class="card__heading heading-three">nature</h3>
+              <span class="card__subtitle"
+                >How to increase your productivity with a Music</span
+              >
+              <p class="card__text">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                santium doloremque laudantium, totam rem sed ut perspiciatis
+                unde omnis iste natus error sit voluptatem accusantium dolo…
+              </p>
+              <span class="card__post-info"
+                >Posted by <b>Eugenia</b>, on July 24, 2019</span
+              >
+              <a href="#" class="card__reading-link">Continue reading</a>
+            </div>
+          </article>
+          <article id="10" class="cards__card card">
+            <img class="card__img" src="img/jpg/card_10.jpeg" alt="Карточка" />
+            <div class="card__article-block">
+              <h3 class="card__heading heading-three">nature</h3>
+              <span class="card__subtitle"
+                >How to increase your productivity with a Music</span
+              >
+              <p class="card__text">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                santium doloremque laudantium, totam rem sed ut perspiciatis
+                unde omnis iste natus error sit voluptatem accusantium dolo…
+              </p>
+              <span class="card__post-info"
+                >Posted by <b>Eugenia</b>, on July 24, 2019</span
+              >
+              <a href="#" class="card__reading-link">Continue reading</a>
+            </div>
+          </article>
+        </div>
+        <button class="cards__loading-link btn_load btn">
+          <span class="btn__text">Загрузить еще</span>
+        </button>
+      </section>
+    </main>
+    <script src="https://unpkg.com/imask"></script>
+    <script type="module">
+      import Swiper from "https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js";
+
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          bulletClass: "slider__link",
+          clickable: true,
+          renderBullet: function (index, className) {
+            let arr = ["DOGIE COIN", "УПАЛ", "ВОЗВРАЩЕНИЕ"];
+            return `<a href="#" class="slider__link">${arr[index]}</a>`;
+          },
+        },
+
+        slidesPerView: 1,
+      });
+
+      var element = document.getElementById("phone");
+      var maskOptions = {
+        mask: "+{7}(000)000-00-00",
+      };
+      var mask = IMask(element, maskOptions);
+    </script>
+  </body>
+</html>

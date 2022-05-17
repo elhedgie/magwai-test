@@ -1,0 +1,238 @@
+@import "../vars"
+.popup
+    box-sizing: border-box
+    position: absolute   
+    display: none
+    justify-content: center
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    background-color: rgba(0, 0, 0, 0.25)
+    z-index: 10
+    transition: $transition
+    &_open
+        display: flex
+    &__subtitle
+        display: flex
+        width: 86%
+        align-self: center
+        font-size: 14px
+        line-height: 150%
+        color: #fff
+        @media(min-width: 768px)
+            align-self: start
+            margin-bottom: 30px
+            width: calc(372/724 * 100%)
+        @media(min-width: 1280px)
+            color: $grey-color
+            
+
+    &__fieldset
+        display: flex
+        flex-flow: column
+        height: 100%
+        padding: 0 
+        margin: 0
+        border: none
+        gap: calc(20px - 10 * ((1920px - 100vw)/(1920 - 320)))     
+    &__heading-two
+        margin-bottom: 20px
+        @media(max-width: 767px)
+            text-align: center
+            font-size: 24px
+            width: 100%
+    &__wrap
+        position: absolute
+        width: calc(1720px - 1400 * ((1920px - 100vw)/(1920 - 320)))
+        min-height: calc(880px - 590 * ((1920px - 100vw)/(1920 - 320)))
+        @media(min-width: 460px)
+            top: 109px
+        @media(min-width: 1280px)
+            background-color: #000
+            display: flex
+            justify-content: end
+            transform: skew(-5deg)
+        
+    &__wrap::before
+        @media(min-width: 1280px)
+            display: flex
+            position: absolute
+            content: ''
+            top: 0
+            left: 0
+            bottom: 0
+            right: 0
+            background-image: url('../img/jpg/moon.jpeg')
+            background-position: left
+            background-size: contain
+            background-repeat: no-repeat
+            transform: skew(5deg)
+            transform-origin: top left
+
+    &__block
+        position: relative
+        flex: 0 0 100%
+        box-sizing: border-box
+        display: flex
+        flex-flow: column nowrap
+        align-items: center
+        justify-content: center
+        padding-top: calc(50px + 20 * ((768px - 100vw)/(768 - 320)))
+        padding-bottom: calc(76px - 66 * ((1920px - 100vw)/(1920 - 320)))
+        z-index: 5
+        background-image: url('../img/jpg/moon.jpeg')
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+        @media(min-width: 1280px)
+            padding-left: calc(90px - 10 * ((1920px - 100vw)/(1920 - 320)))
+            padding-right: calc(90px - 10 * ((1920px - 100vw)/(1920 - 320)))
+            padding-top: calc(76px - 66 * ((1920px - 100vw)/(1920 - 320)))
+            flex: 0 0 50%
+            background-color: #131313b4
+            background-image: none
+            
+    &__apply-form
+        height: 100%
+        display: flex
+        flex-flow: column
+        min-height: calc(666/1920 * 100%)
+        @media(min-width: 1280px)
+            transform: skew(5deg)
+        
+
+
+
+
+.close-btn
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    top: 2em
+    right: 2em
+    transform: skew(-15deg)
+    cursor: pointer
+    background-color: transparent
+    border: none
+    @media( hover: hover)
+        &:hover path
+            fill: #FE60B7
+    @media(min-width: 1280px)
+        width: 107px
+        height: 70px
+        top: 0
+        right: 0
+        border: 1px solid rgba(255, 255, 255, .25)
+        @media( hover: hover)
+            &:hover path
+                fill: #fff
+    & svg
+        transform: skew(15deg)
+        width: 2em
+        height: 2em
+        @media(min-width: 1280px)
+            width: 26px
+            height: 26px
+    & path
+        fill: #fff
+        transition: $transition
+        @media(min-width: 1280px)
+            fill: rgba(255, 255, 255, .25)
+            @media( hover: hover)
+                &:hover path
+                    fill: #fff
+            
+.apply-form
+
+    &__input
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        padding-left: calc(36px - 20 * ((1920px - 100vw)/(1920 - 320)))
+        min-height: calc(70px - 30 * ((1920px - 100vw)/(1920 - 320)))
+        border: 1px solid #2B2B2B
+        font-size: calc(16px - 4 * ((1920px - 100vw)/(1920 - 320)))
+        font-weight: 700
+        color: #fff
+        text-transform: uppercase
+        background-color: #131313b4
+        transition: $transition
+
+    &__input:focus
+        border: none
+        outline: 1px solid #fff
+        color: #fff
+        padding-top: calc(13px - 5 * ((1920px - 100vw)/(1920 - 320)))
+
+        
+
+    &__input::placeholder
+        color: #fff
+    &__textarea
+        display: flex
+        border: 1px solid #2B2B2B
+        font-size: calc(16px - 4 * ((1920px - 100vw)/(1920 - 320)))
+        font-weight: 700
+        color: #fff
+        text-transform: uppercase
+        background-color: #131313b4
+        width: 100%
+        padding-left: calc(36px - 20 * ((1920px - 100vw)/(1920 - 320)))
+        padding-top: calc(22px - 10 * ((1920px - 100vw)/(1920 - 320)))
+        transition: $transition
+
+    &__textarea:focus
+        border: none
+        outline: 1px solid #fff
+        color: #fff
+    &__textarea::placeholder
+        color: #fff    
+    &__commitment-text
+        display: flex
+        flex-flow: column
+        width: calc(401px - 101 * ((1920px - 100vw)/(1920 - 320)))
+        padding-left: 2em
+        color: $grey-color
+        font-size: 14px
+        line-height: 150%
+        @media(min-width: 768px)
+            padding-left: 0
+    &__commitment-link
+        color: inherit
+        text-decoration: underline
+    &__bottom-block
+        display: flex
+        flex-flow: column
+        align-items: center
+        gap: 1em
+
+        @media(min-width: 768px)
+            gap: calc(40px - 10 * ((1920px - 100vw)/(1920 - 320)))
+            flex-flow: row
+    &__apply-btn
+        width: calc(293px - 3 * ((1920px - 100vw)/(1920 - 320)))
+
+.fake-placeholder
+    position: relative
+.fake-placeholder__text
+    display: none
+.apply-form__input:focus + .fake-placeholder__text
+    display: flex
+    width: 100%
+   
+.fake-placeholder__text
+    position: absolute
+    top: calc(13px - 5 * ((1920px - 100vw)/(1920 - 320)))
+    left: calc(36px - 20 * ((1920px - 100vw)/(1920 - 320)))
+    color: rgba(255, 255, 255, 0.25)
+    font-size: 12px
+    font-weight: 700
+    text-transform: uppercase
+
+.invalid
+    border: 1px solid red
+    outline: 1px solid red

@@ -1,0 +1,133 @@
+.hero
+    width: 100%
+    min-height: calc(914px - 416 * ((768px - 100vw)/(768 - 320)))
+    @media(min-width: 768px)
+        min-height: calc(1034px - 120 * ((1920px - 100vw)/(1920 - 768)))
+    margin-bottom: calc(53px - 13 * ((1920px - 100vw)/(1920 - 320)))
+    &__title-two
+        align-self: start
+        
+    &__subtitle
+        align-self: flex-start
+        font-size: calc(16 )
+    &__apply-btn
+        width: calc(293px - 3 * ((768px - 100vw)/(768 - 320)))
+
+.slider
+    display: flex
+    border-top-left-radius: 60px
+    border-top-right-radius: 60px
+    gap: 20px
+    &__info
+        display: flex
+        flex-flow: column 
+        justify-content: space-between
+        align-items: center
+        min-height: calc(300px - 8 * ((768px - 100vw)/(768 - 320)))
+        width: 100%
+        gap: 20px
+        @media( min-width: 768px)
+            align-items: start
+            min-height: calc(266px - 147 * ((1920px - 100vw)/(1920 - 768)))
+            width: calc(686px - 293 * ((1920px - 100vw)/(1920 - 768)))
+            gap: 40px
+    .slider__img
+        width: 100%
+    &__link
+        width: 33.3%
+        height: 3px
+        font-size: 0
+        background-color: rgba(255, 255, 255, 0.25)
+        @media(min-width: 768px)
+            width: 100%
+            height: auto
+            text-decoration: none
+            font-weight: 400
+            font-size: 14px
+            color: rgba(255,255,255,0.25)
+            background-color: transparent
+            text-align: end
+    &__slide-one
+        background: linear-gradient(to top, #131313 0%, rgba(19, 19, 19, 0) 100%), url('../img/jpg/back-1.jpeg')
+        background-repeat: no-repeat
+        background-size: contain
+    &__slide-two
+
+        background: linear-gradient(to top, #131313 0%, rgba(19, 19, 19, 0) 100%), url('../img/jpg/back-2.jpeg')
+        background-repeat: no-repeat
+        background-size: contain
+    &__slide-three
+
+        background: linear-gradient(to top, #131313 0%, rgba(19, 19, 19, 0) 100%), url('../img/jpg/back-3.jpeg')
+        background-repeat: no-repeat
+        background-size: contain
+    &__slide-three, &__slide-one, &__slide-two
+        background-size: cover
+        
+.swiper
+    min-width: 0
+    color: #fff
+    height: calc(914px - 416 * ((768px - 100vw)/(768 - 320)))
+
+    @media(min-width: 768px)
+        height: calc(1034px - 120 * ((1920px - 100vw)/(1920 - 768)))
+    &-slide-next
+        .apply-btn
+            margin-left: 1em
+    &-slide
+        height: auto
+    &-slide-active
+        box-sizing: border-box
+        display: flex
+        flex-flow: column
+        justify-content: end
+        align-items: center
+        padding-bottom: calc(50px - 30 * ((768px - 100vw)/(768 - 320))) 
+        padding-left: calc(50px - 35 * ((768px - 100vw)/(768 - 320))) 
+        padding-right: calc(50px - 35 * ((768px - 100vw)/(768 - 320))) 
+        gap: calc(46px - 0 * ((768px - 100vw)/(768 - 320)))
+        @media(min-width: 768px)
+            justify-content: space-between
+            align-items: flex-end
+            flex-flow: row
+            padding-bottom: calc(117px - 67 * ((1920px - 100vw)/(1920 - 768))) 
+            padding-left: calc(100px - 50 * ((1920px - 100vw)/(1920 - 768)))
+            padding-right: calc(100px - 50 * ((1920px - 100vw)/(1920 - 768)))
+        
+
+    &-pagination 
+        display: flex
+        position: static
+        flex-flow: row
+        left: auto!important
+        width: 100%
+        pointer-events: all
+        gap: 1em
+        @media(min-width: 768px)
+            flex-flow: column
+            align-items: end
+            justify-content: space-between
+            gap: 15px
+            width: 120px!important
+            height: 93px
+
+    &-pagination a 
+        text-decoration: none
+    &-pagination-bullet-active
+        background-color: #fff
+        @media(min-width: 768px)
+            color: #fff
+            font-weight: 700
+            line-height: 150%
+            background-color: transparent
+            font-size: 14px
+
+.heading-two
+    font-size: 20px
+    line-height: 150%
+    font-weight: 700
+    text-transform: uppercase
+    color: #fff
+    @media (min-width: 768px)
+        font-size: 42px
+        line-height: 51px
