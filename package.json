@@ -12,6 +12,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/preset-env": "^7.18.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.5",
+    "babel-preset-latest": "^6.24.1",
     "browser-sync": "^2.27.9",
     "del": "^6.0.0",
     "fs": "^0.0.1-security",
@@ -37,11 +41,13 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^6.7.1",
     "gulp-cli": "^2.3.0",
     "imask": "^6.4.2",
     "jquery-validation": "^1.19.3",
     "normalize.css": "^8.0.1",
     "sass-loader": "^12.6.0",
-    "swiper": "^8.1.4"
+    "swiper": "^8.1.5"
   }
 }

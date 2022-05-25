@@ -20,9 +20,9 @@
         font-size: 14px
         line-height: 150%
         color: #fff
+        margin-bottom: 30px
         @media(min-width: 768px)
             align-self: start
-            margin-bottom: 30px
             width: calc(372/724 * 100%)
         @media(min-width: 1280px)
             color: $grey-color
@@ -35,7 +35,8 @@
         padding: 0 
         margin: 0
         border: none
-        gap: calc(20px - 10 * ((1920px - 100vw)/(1920 - 320)))     
+        gap: 3em
+
     &__heading-two
         margin-bottom: 20px
         @media(max-width: 767px)
@@ -152,15 +153,17 @@
         justify-content: center
         align-items: center
         width: 100%
-        padding-left: calc(36px - 20 * ((1920px - 100vw)/(1920 - 320)))
-        min-height: calc(70px - 30 * ((1920px - 100vw)/(1920 - 320)))
         border: 1px solid #2B2B2B
         font-size: calc(16px - 4 * ((1920px - 100vw)/(1920 - 320)))
-        font-weight: 700
         color: #fff
-        text-transform: uppercase
+        font-weight: 700
         background-color: #131313b4
+        text-transform: uppercase
         transition: $transition
+        min-height: calc(70px - 10 * ((768px - 100vw)/(768 - 320)))
+        padding-left: calc(36px - 20 * ((1920px - 100vw)/(1920 - 320)))
+        @media(min-width: 768px)  
+            min-height: calc(70px - 30 * ((1920px - 100vw)/(1920 - 768)))
 
     &__input:focus
         border: none
@@ -182,9 +185,9 @@
         background-color: #131313b4
         width: 100%
         padding-left: calc(36px - 20 * ((1920px - 100vw)/(1920 - 320)))
-        padding-top: calc(22px - 10 * ((1920px - 100vw)/(1920 - 320)))
+        padding-top: 2em
         transition: $transition
-
+        resize: none
     &__textarea:focus
         border: none
         outline: 1px solid #fff
@@ -218,21 +221,34 @@
 
 .fake-placeholder
     position: relative
-.fake-placeholder__text
+.fake-placeholder::after
+    content: attr(data-ph)
     display: none
-.apply-form__input:focus + .fake-placeholder__text
-    display: flex
-    width: 100%
-   
-.fake-placeholder__text
     position: absolute
-    top: calc(13px - 5 * ((1920px - 100vw)/(1920 - 320)))
-    left: calc(36px - 20 * ((1920px - 100vw)/(1920 - 320)))
+    width: 100%
     color: rgba(255, 255, 255, 0.25)
-    font-size: 12px
     font-weight: 700
     text-transform: uppercase
+    font-size: 10px
+    top: .5em
+    left: calc(36px - 20 * ((1920px - 100vw)/(1920 - 320)))
+    @media(min-width: 768px)
+        top: 1em
+        font-size: 12px
+
+.fake-placeholder:focus-within::after
+    display: inline-block
 
 .invalid
-    border: 1px solid red
-    outline: 1px solid red
+    outline: 1px solid #9c2c2c
+.valid
+    outline: 1px solid #38703d
+
+.error 
+    position: absolute
+    top: -2em
+    left: 1em
+    display: none
+    color: #9c2c2c
+    font-size: 14px
+    margin-bottom: 10px

@@ -4,20 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-    />
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.min.css" />
     <script src="js/app.min.js"></script>
     <title>Magwai</title>
   </head>
   <body>
     <header class="header">
-      <div class="header__burger burger">
+      <button type="button" class="header__burger burger">
         <span class="burger__middle"></span>
-      </div>
+      </button>
       <a href="#" class="header__logo">
         <picture>
           <source srcset="img/svg/logoS.svg" media="(max-width: 767px)" />
@@ -78,7 +73,7 @@
       <section class="popup">
         <div class="popup__wrap">
           <div class="popup__block">
-            <form action="#" class="popup__apply-form apply-form">
+            <form name="form" action="#" class="popup__apply-form apply-form">
               <fieldset class="popup__fieldset">
                 <button aria-label="Закрыть" class="popup__close-btn close-btn">
                   <svg
@@ -98,43 +93,46 @@
                   Оставьте заявку и наш менеджер свяжется с вами в течение 10
                   -15 минут
                 </span>
-                <label for="name" class="fake-placeholder"
+                <label data-ph="Ваше имя*" for="name" class="fake-placeholder"
+                  ><span class="error"></span
                   ><input
-                    required
                     id="name"
                     type="text"
                     class="apply-form__input"
                     placeholder="Ваше имя*"
-                  /><span class="fake-placeholder__text">Ваше имя*</span></label
-                >
+                /></label>
 
-                <label for="email" class="fake-placeholder"
+                <label data-ph="Ваш email*" for="email" class="fake-placeholder"
+                  ><span class="error"></span
                   ><input
                     id="email"
                     type="email"
                     class="apply-form__input"
                     value="MAGWAI@info.ru"
                     placeholder="Ваш email"
-                  /><span class="fake-placeholder__text"
-                    >Ваш email*</span
-                  ></label
-                >
-                <label for="phone" class="fake-placeholder"
+                /></label>
+                <label data-ph="Ваш номер*" for="phone" class="fake-placeholder"
+                  ><span class="error"></span
                   ><input
                     id="phone"
                     type="tel"
                     class="apply-form__input"
                     placeholder="Ваш телефон"
-                  /><span class="fake-placeholder__text"
-                    >Ваш телефон*</span
-                  ></label
+                /></label>
+                <label
+                  data-ph="Ваш вопрос*"
+                  for="apply"
+                  class="fake-placeholder"
                 >
-                <textarea
-                  class="apply-form__textarea"
-                  cols="30"
-                  rows="10"
-                  placeholder="Ваш вопрос*"
-                ></textarea>
+                  <span class="error"></span>
+                  <textarea
+                    id="apply"
+                    class="apply-form__textarea"
+                    cols="30"
+                    rows="10"
+                    placeholder="Ваш вопрос*"
+                  ></textarea>
+                </label>
                 <div class="apply-form__bottom-block">
                   <button
                     type="submit"
@@ -385,30 +383,5 @@
         </button>
       </section>
     </main>
-    <script src="https://unpkg.com/imask"></script>
-    <script type="module">
-      import Swiper from "https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js";
-
-      const swiper = new Swiper(".swiper", {
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          bulletClass: "slider__link",
-          clickable: true,
-          renderBullet: function (index, className) {
-            let arr = ["DOGIE COIN", "УПАЛ", "ВОЗВРАЩЕНИЕ"];
-            return `<a href="#" class="slider__link">${arr[index]}</a>`;
-          },
-        },
-
-        slidesPerView: 1,
-      });
-
-      var element = document.getElementById("phone");
-      var maskOptions = {
-        mask: "+{7}(000)000-00-00",
-      };
-      var mask = IMask(element, maskOptions);
-    </script>
   </body>
 </html>
